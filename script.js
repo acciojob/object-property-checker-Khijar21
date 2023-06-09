@@ -1,17 +1,10 @@
 const sampleObject = { red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
 
 function hasKey(key) {
-	if(sampleObject.red === key){
-		return true;
-		break;
-	}
-	else if(sampleObject.green === key){
-		return true;
-		break;
-	}
-	else if(sampleObject.white === key){
-		return true;
-		break;
+	for(let color in sampleObject) {
+		if(color === key){
+			return true;
+		}
 	}
 	return false;
 }
@@ -19,4 +12,5 @@ function hasKey(key) {
 // Do not change the code below
 const key = prompt("Enter Key.");
 alert(hasKey(key));
+
 
